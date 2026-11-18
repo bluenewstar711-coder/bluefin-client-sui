@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "test": "ts-mocha --timeout 100000 tests/*.test.ts",
-    "prepare": "husky install",
+    "prepare": "husky install && node scripts/ci-diagnostics.js",
     "debug": "ts-node ./scripts/myDebuger.ts",
     "lint": "yarn eslint --fix --cache --max-warnings=-1 .",
     "format-all": "yarn prettier --write .",
